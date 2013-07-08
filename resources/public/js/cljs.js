@@ -21640,10 +21640,11 @@ speedy_xfer.client.reset_download_link = function(a) {
 };
 speedy_xfer.client.upload_complete_handler = function() {
   domina.log.call(null, "upload complete");
-  return cljs.core.doall.call(null, cljs.core.map.call(null, function(a) {
+  cljs.core.doall.call(null, cljs.core.map.call(null, function(a) {
     return cljs.core._EQ_.call(null, (new cljs.core.Keyword("\ufdd0'original-region-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), a.getAttribute(cljs.core.name.call(null, "\ufdd0'data-region"))) ? speedy_xfer.client.add_download_link.call(null, a, [cljs.core.str((new cljs.core.Keyword("\ufdd0'target-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file))), cljs.core.str((new cljs.core.Keyword("\ufdd0'key")).call(null, cljs.core.deref.call(null, 
     speedy_xfer.client.s3.current_file)))].join("")) : speedy_xfer.client.reset_download_link.call(null, a)
-  }, domina.nodes.call(null, domina.css.sel.call(null, ".dest-region"))))
+  }, domina.nodes.call(null, domina.css.sel.call(null, ".dest-region"))));
+  return domina.set_style_BANG_.call(null, domina.by_id.call(null, "region-download-links"), "display", "block")
 };
 goog.exportSymbol("speedy_xfer.client.upload_complete_handler", speedy_xfer.client.upload_complete_handler);
 speedy_xfer.client.upload_progress_handler = function(a) {

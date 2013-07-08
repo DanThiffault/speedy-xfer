@@ -50,7 +50,7 @@
                 [:div.row
                  [:div.span8
                   [:span#status]]]
-                [:dev.row
+                [:dev.row {:style "display: none" :id :region-download-links}
                  [:div.span8
                    [:table {:class "table"}
                     [:thead

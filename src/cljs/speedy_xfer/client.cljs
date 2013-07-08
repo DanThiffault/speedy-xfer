@@ -2,7 +2,7 @@
   (:require [speedy-xfer.client.s3 :as s3]
              [domina :refer [by-id value by-class set-value! set-attr!
                             get-attr set-text! append! destroy! log nodes
-                             single-node]]
+                             single-node set-style!]]
             [domina.css :as css]
             [domina.events :refer [listen!]]
             [clojure.browser.repl :as repl]))
@@ -20,10 +20,11 @@
 (defn ^:export upload-complete-handler []
   (log "upload complete")
   (doall
-  (map #(if (= (:original-region-url @s3/current-file) (.getAttribute % (name :data-region)))
-          (add-download-link % (str (:target-url @s3/current-file) (:key @s3/current-file)))
-          (reset-download-link %))
-       (nodes (css/sel ".dest-region")))))
+   (map #(if (= (:original-region-url @s3/current-file) (.getAttribute % (name :data-region)))
+           (add-download-link % (str (:target-url @s3/current-file) (:key @s3/current-file)))
+           (reset-download-link %))
+        (nodes (css/sel ".dest-region"))))
+  (set-style! (by-id "region-download-links") "display" "block"))
 
 (defn upload-progress-handler [e data]
   (let [done (.-loaded e)
