@@ -66,6 +66,9 @@
 
 (defremote sign-url [region-url file-name] (s3/generate-signed-url s3/s3-cred region-url (get s3/regional-buckets region-url) file-name))
 
+(defremote access-key [] {:access-key (:access-key s3/cred)})
+
+
 (def handler
   (site app-routes))
 

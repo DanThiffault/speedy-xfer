@@ -30,7 +30,7 @@
    "s3-ap-northeast-1.amazonaws.com" "speedyxfer-ap-southeast-1"
    "s3-sa-east-1.amazonaws.com" "speedyxfer-ap-southeast-1"})
 
-(def s3-cred
+(def cred
   {:secret-key (env :s3-secret)
    :access-key (env :s3-key)})
 
@@ -53,7 +53,7 @@
 
 (defn generate-signature [secret-key policy]
   (let [hmac (Mac/getInstance "HmacSHA1")]
-    (.init hmac (SecretKeySpec. (.getBytes (:secret-key s3-cred) "UTF-8")
+    (.init hmac (SecretKeySpec. (.getBytes (:secret-key cred) "UTF-8")
                                 "HmacSHA1"))
     (s/replace
      (base64-encode (.doFinal hmac (.getBytes policy "UTF-8")))

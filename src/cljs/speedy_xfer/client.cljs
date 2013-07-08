@@ -1,5 +1,5 @@
 (ns speedy-xfer.client
-  (:require [speedy-xfer.client.s3 :refer [upload-files]]
+  (:require [speedy-xfer.client.s3 :as s3]
              [domina :refer [by-id value by-class set-value! set-attr!
                             set-text! append! destroy! log]]
             [domina.events :refer [listen!]]
@@ -14,10 +14,11 @@
     (set! (.-value progress-bar) done)))
 
 (defn handle-file-select [evt]
-  (upload-files (-> evt :target .-files) (.-value (by-id "region-from")) upload-progress-handler))
+  (s3/upload-files (-> evt :target .-files) (.-value (by-id "region-from")) upload-progress-handler))
 
 (defn ^:export init []
   (repl/connect "http://localhost:9000/repl")
+  (s3/init)
   (listen! (by-id "files") :change handle-file-select))
 
 (set! (.-onload js/window) init)

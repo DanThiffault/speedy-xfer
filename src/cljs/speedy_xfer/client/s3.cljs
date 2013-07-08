@@ -1,21 +1,30 @@
 (ns speedy-xfer.client.s3
   (:require [shoreleave.remotes.http-rpc :refer [remote-callback]]))
 
+(def access-key (atom ""))
+
+(defn retrieve-access-key []
+  (remote-callback :access-key
+                   []
+                   #(reset! access-key (:access-key %))))
+
+(defn sign-file-path [file region f]
+  (remote-callback :sign-url
+                   [region (.-name file)]
+                   f))
+
+
+
 (defn generate-form-data [filekey policy signature file]
   (let [fd (js/FormData.)]
     (.append fd "key" filekey)
-    (.append fd "AWSAccessKeyId" "1WH6H3JANFZSYAJXG5G2")
+    (.append fd "AWSAccessKeyId" @access-key)
     (.append fd "acl" "public-read")
     (.append fd "policy" policy)
     (.append fd "signature" signature)
     (.append fd "success_action_status" "201")
     (.append fd "file" file)
     fd))
-
-(defn sign-file-path [file region f]
-  (remote-callback :sign-url
-                   [region (.-name file)]
-                   f))
 
 (defn upload-signed-file [url filekey policy signature file progress-handler]
   (let [xhr (js/XMLHttpRequest.)]
@@ -36,3 +45,6 @@
   (let [files (file-list-to-array file-list)]
     (doseq [file files]
       (upload-file file region progress-handler))))
+
+(defn init []
+  (retrieve-access-key))

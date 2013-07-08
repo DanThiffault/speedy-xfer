@@ -20987,19 +20987,25 @@ shoreleave.remotes.http_rpc.remote_callback = function() {
 }();
 var speedy_xfer = {client:{}};
 speedy_xfer.client.s3 = {};
+speedy_xfer.client.s3.access_key = cljs.core.atom.call(null, "");
+speedy_xfer.client.s3.retrieve_access_key = function() {
+  return shoreleave.remotes.http_rpc.remote_callback.call(null, "\ufdd0'access-key", cljs.core.PersistentVector.EMPTY, function(a) {
+    return cljs.core.reset_BANG_.call(null, speedy_xfer.client.s3.access_key, (new cljs.core.Keyword("\ufdd0'access-key")).call(null, a))
+  })
+};
+speedy_xfer.client.s3.sign_file_path = function(a, b, c) {
+  return shoreleave.remotes.http_rpc.remote_callback.call(null, "\ufdd0'sign-url", cljs.core.PersistentVector.fromArray([b, a.name], !0), c)
+};
 speedy_xfer.client.s3.generate_form_data = function(a, b, c, d) {
   var e = new FormData;
   e.append("key", a);
-  e.append("AWSAccessKeyId", "1WH6H3JANFZSYAJXG5G2");
+  e.append("AWSAccessKeyId", cljs.core.deref.call(null, speedy_xfer.client.s3.access_key));
   e.append("acl", "public-read");
   e.append("policy", b);
   e.append("signature", c);
   e.append("success_action_status", "201");
   e.append("file", d);
   return e
-};
-speedy_xfer.client.s3.sign_file_path = function(a, b, c) {
-  return shoreleave.remotes.http_rpc.remote_callback.call(null, "\ufdd0'sign-url", cljs.core.PersistentVector.fromArray([b, a.name], !0), c)
 };
 speedy_xfer.client.s3.upload_signed_file = function(a, b, c, d, e, f) {
   var g = new XMLHttpRequest;
@@ -21032,6 +21038,9 @@ speedy_xfer.client.s3.upload_files = function(a, b, c) {
     }
   }
 };
+speedy_xfer.client.s3.init = function() {
+  return speedy_xfer.client.s3.retrieve_access_key.call(null)
+};
 speedy_xfer.client.upload_progress_handler = function(a) {
   var b = a.loaded, a = a.total, c = domina.by_id.call(null, "file-progress");
   c.max = a;
@@ -21042,6 +21051,7 @@ speedy_xfer.client.handle_file_select = function(a) {
 };
 speedy_xfer.client.init = function() {
   clojure.browser.repl.connect.call(null, "http://localhost:9000/repl");
+  speedy_xfer.client.s3.init.call(null);
   return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "files"), "\ufdd0'change", speedy_xfer.client.handle_file_select)
 };
 goog.exportSymbol("speedy_xfer.client.init", speedy_xfer.client.init);
