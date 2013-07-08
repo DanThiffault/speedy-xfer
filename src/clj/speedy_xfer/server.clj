@@ -19,7 +19,7 @@
 (defn generate-dest-region-row [[description url]]
   [:tr
    [:td description]
-   [:td [:a {:href "#"} "Generate"]]])
+   [:td {:data-region url :class "dest-region"} [:a {:href "#"} ""]]])
 
 (defn generate-dest-regions []
   [:tbody
@@ -64,7 +64,7 @@
   (resources "/")
   (not-found "Page not found"))
 
-(defremote sign-url [region-url file-name] (s3/generate-signed-url s3/s3-cred region-url (get s3/regional-buckets region-url) file-name))
+(defremote sign-url [region-url file-name] (s3/generate-signed-url s3/cred region-url (get s3/regional-buckets region-url) file-name))
 
 (defremote access-key [] {:access-key (:access-key s3/cred)})
 

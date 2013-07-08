@@ -7,6 +7,7 @@
                  [ring "1.1.8"]
                  [hiccup "1.0.3"]
                  [domina "1.0.1"]
+                 [org.clojure/google-closure-library-third-party "0.0-2029"]
                  [environ "0.4.0"]
                  [clj-aws-s3 "0.3.5"]
                  [ring-edn "0.1.0"]

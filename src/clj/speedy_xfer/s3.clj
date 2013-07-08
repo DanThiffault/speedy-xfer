@@ -64,4 +64,6 @@
      {:key (str s3-bucket-suffix "/" filename)
       :policy policy
       :signature (generate-signature (:secret-key cred) policy)
-      :target-url (str "https://" bucket "." region-url "/")}))
+      :target-url (str "https://" bucket "." region-url "/")
+      :bucket bucket
+      :region-url region-url}))

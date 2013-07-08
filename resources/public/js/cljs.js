@@ -1612,137 +1612,137 @@ cljs.core._invoke = function() {
     }
     return n.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k)
   }, p = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n) {
-    var q;
-    q = a ? a.cljs$core$IFn$_invoke$arity$14 : a;
-    if(q) {
-      return a.cljs$core$IFn$_invoke$arity$14(a, b, c, d, e, f, g, h, i, j, l, m, k, n)
-    }
-    q = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if(!q && (q = cljs.core._invoke._, !q)) {
-      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
-    }
-    return q.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n)
-  }, q = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q) {
-    var p;
-    p = a ? a.cljs$core$IFn$_invoke$arity$15 : a;
-    if(p) {
-      return a.cljs$core$IFn$_invoke$arity$15(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q)
-    }
-    p = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if(!p && (p = cljs.core._invoke._, !p)) {
-      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
-    }
-    return p.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, q)
-  }, r = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p) {
-    var s;
-    s = a ? a.cljs$core$IFn$_invoke$arity$16 : a;
-    if(s) {
-      return a.cljs$core$IFn$_invoke$arity$16(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p)
-    }
-    s = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if(!s && (s = cljs.core._invoke._, !s)) {
-      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
-    }
-    return s.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p)
-  }, s = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s) {
     var r;
-    r = a ? a.cljs$core$IFn$_invoke$arity$17 : a;
+    r = a ? a.cljs$core$IFn$_invoke$arity$14 : a;
     if(r) {
-      return a.cljs$core$IFn$_invoke$arity$17(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s)
+      return a.cljs$core$IFn$_invoke$arity$14(a, b, c, d, e, f, g, h, i, j, l, m, k, n)
     }
     r = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
     if(!r && (r = cljs.core._invoke._, !r)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return r.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s)
-  }, t = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r) {
+    return r.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n)
+  }, r = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r) {
+    var p;
+    p = a ? a.cljs$core$IFn$_invoke$arity$15 : a;
+    if(p) {
+      return a.cljs$core$IFn$_invoke$arity$15(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r)
+    }
+    p = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if(!p && (p = cljs.core._invoke._, !p)) {
+      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
+    }
+    return p.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, r)
+  }, q = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p) {
+    var s;
+    s = a ? a.cljs$core$IFn$_invoke$arity$16 : a;
+    if(s) {
+      return a.cljs$core$IFn$_invoke$arity$16(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p)
+    }
+    s = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if(!s && (s = cljs.core._invoke._, !s)) {
+      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
+    }
+    return s.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p)
+  }, s = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s) {
+    var q;
+    q = a ? a.cljs$core$IFn$_invoke$arity$17 : a;
+    if(q) {
+      return a.cljs$core$IFn$_invoke$arity$17(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s)
+    }
+    q = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if(!q && (q = cljs.core._invoke._, !q)) {
+      throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
+    }
+    return q.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s)
+  }, t = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q) {
     var t;
     t = a ? a.cljs$core$IFn$_invoke$arity$18 : a;
     if(t) {
-      return a.cljs$core$IFn$_invoke$arity$18(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r)
+      return a.cljs$core$IFn$_invoke$arity$18(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q)
     }
     t = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
     if(!t && (t = cljs.core._invoke._, !t)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return t.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r)
-  }, u = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t) {
+    return t.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q)
+  }, u = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t) {
     var u;
     u = a ? a.cljs$core$IFn$_invoke$arity$19 : a;
     if(u) {
-      return a.cljs$core$IFn$_invoke$arity$19(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t)
+      return a.cljs$core$IFn$_invoke$arity$19(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t)
     }
     u = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
     if(!u && (u = cljs.core._invoke._, !u)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return u.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t)
-  }, x = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t, u) {
-    var x;
-    x = a ? a.cljs$core$IFn$_invoke$arity$20 : a;
-    if(x) {
-      return a.cljs$core$IFn$_invoke$arity$20(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t, u)
+    return u.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t)
+  }, v = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t, u) {
+    var v;
+    v = a ? a.cljs$core$IFn$_invoke$arity$20 : a;
+    if(v) {
+      return a.cljs$core$IFn$_invoke$arity$20(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t, u)
     }
-    x = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if(!x && (x = cljs.core._invoke._, !x)) {
+    v = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if(!v && (v = cljs.core._invoke._, !v)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return x.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t, u)
-  }, E = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t, u, x) {
-    var E;
-    E = a ? a.cljs$core$IFn$_invoke$arity$21 : a;
-    if(E) {
-      return a.cljs$core$IFn$_invoke$arity$21(a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t, u, x)
+    return v.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t, u)
+  }, J = function(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t, u, v) {
+    var L;
+    L = a ? a.cljs$core$IFn$_invoke$arity$21 : a;
+    if(L) {
+      return a.cljs$core$IFn$_invoke$arity$21(a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t, u, v)
     }
-    E = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
-    if(!E && (E = cljs.core._invoke._, !E)) {
+    L = cljs.core._invoke[goog.typeOf(null == a ? null : a)];
+    if(!L && (L = cljs.core._invoke._, !L)) {
       throw cljs.core.missing_protocol.call(null, "IFn.-invoke", a);
     }
-    return E.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, q, p, s, r, t, u, x)
-  }, a = function(a, v, w, y, z, A, B, C, D, F, G, H, I, J, K, L, M, N, O, P, Q) {
+    return L.call(null, a, b, c, d, e, f, g, h, i, j, l, m, k, n, r, p, s, q, t, u, v)
+  }, a = function(a, x, y, z, A, B, w, D, C, E, F, G, H, I, K, M, N, O, P, R, S) {
     switch(arguments.length) {
       case 1:
         return b.call(this, a);
       case 2:
-        return c.call(this, a, v);
+        return c.call(this, a, x);
       case 3:
-        return d.call(this, a, v, w);
+        return d.call(this, a, x, y);
       case 4:
-        return e.call(this, a, v, w, y);
+        return e.call(this, a, x, y, z);
       case 5:
-        return f.call(this, a, v, w, y, z);
+        return f.call(this, a, x, y, z, A);
       case 6:
-        return g.call(this, a, v, w, y, z, A);
+        return g.call(this, a, x, y, z, A, B);
       case 7:
-        return h.call(this, a, v, w, y, z, A, B);
+        return h.call(this, a, x, y, z, A, B, w);
       case 8:
-        return i.call(this, a, v, w, y, z, A, B, C);
+        return i.call(this, a, x, y, z, A, B, w, D);
       case 9:
-        return j.call(this, a, v, w, y, z, A, B, C, D);
+        return j.call(this, a, x, y, z, A, B, w, D, C);
       case 10:
-        return l.call(this, a, v, w, y, z, A, B, C, D, F);
+        return l.call(this, a, x, y, z, A, B, w, D, C, E);
       case 11:
-        return m.call(this, a, v, w, y, z, A, B, C, D, F, G);
+        return m.call(this, a, x, y, z, A, B, w, D, C, E, F);
       case 12:
-        return k.call(this, a, v, w, y, z, A, B, C, D, F, G, H);
+        return k.call(this, a, x, y, z, A, B, w, D, C, E, F, G);
       case 13:
-        return n.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I);
+        return n.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H);
       case 14:
-        return p.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J);
+        return p.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I);
       case 15:
-        return q.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J, K);
+        return r.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I, K);
       case 16:
-        return r.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J, K, L);
+        return q.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I, K, M);
       case 17:
-        return s.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J, K, L, M);
+        return s.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I, K, M, N);
       case 18:
-        return t.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J, K, L, M, N);
+        return t.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I, K, M, N, O);
       case 19:
-        return u.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J, K, L, M, N, O);
+        return u.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I, K, M, N, O, P);
       case 20:
-        return x.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J, K, L, M, N, O, P);
+        return v.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I, K, M, N, O, P, R);
       case 21:
-        return E.call(this, a, v, w, y, z, A, B, C, D, F, G, H, I, J, K, L, M, N, O, P, Q)
+        return J.call(this, a, x, y, z, A, B, w, D, C, E, F, G, H, I, K, M, N, O, P, R, S)
     }
     throw Error("Invalid arity: " + arguments.length);
   };
@@ -1760,13 +1760,13 @@ cljs.core._invoke = function() {
   a.cljs$lang$arity$12 = k;
   a.cljs$lang$arity$13 = n;
   a.cljs$lang$arity$14 = p;
-  a.cljs$lang$arity$15 = q;
-  a.cljs$lang$arity$16 = r;
+  a.cljs$lang$arity$15 = r;
+  a.cljs$lang$arity$16 = q;
   a.cljs$lang$arity$17 = s;
   a.cljs$lang$arity$18 = t;
   a.cljs$lang$arity$19 = u;
-  a.cljs$lang$arity$20 = x;
-  a.cljs$lang$arity$21 = E;
+  a.cljs$lang$arity$20 = v;
+  a.cljs$lang$arity$21 = J;
   return a
 }();
 cljs.core.ICounted = {};
@@ -5580,39 +5580,39 @@ cljs.core.apply_to = function(a, b, c) {
   if(12 === b) {
     return a.cljs$lang$arity$12 ? a.cljs$lang$arity$12(c, d, e, f, g, a, h, i, j, l, m, k) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k)
   }
-  var n = cljs.core._first.call(null, p), q = cljs.core._rest.call(null, p);
+  var n = cljs.core._first.call(null, p), r = cljs.core._rest.call(null, p);
   if(13 === b) {
     return a.cljs$lang$arity$13 ? a.cljs$lang$arity$13(c, d, e, f, g, a, h, i, j, l, m, k, n) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n)
   }
-  var p = cljs.core._first.call(null, q), r = cljs.core._rest.call(null, q);
+  var p = cljs.core._first.call(null, r), q = cljs.core._rest.call(null, r);
   if(14 === b) {
     return a.cljs$lang$arity$14 ? a.cljs$lang$arity$14(c, d, e, f, g, a, h, i, j, l, m, k, n, p) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p)
   }
-  var q = cljs.core._first.call(null, r), s = cljs.core._rest.call(null, r);
+  var r = cljs.core._first.call(null, q), s = cljs.core._rest.call(null, q);
   if(15 === b) {
-    return a.cljs$lang$arity$15 ? a.cljs$lang$arity$15(c, d, e, f, g, a, h, i, j, l, m, k, n, p, q) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, q)
+    return a.cljs$lang$arity$15 ? a.cljs$lang$arity$15(c, d, e, f, g, a, h, i, j, l, m, k, n, p, r) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, r)
   }
-  var r = cljs.core._first.call(null, s), t = cljs.core._rest.call(null, s);
+  var q = cljs.core._first.call(null, s), t = cljs.core._rest.call(null, s);
   if(16 === b) {
-    return a.cljs$lang$arity$16 ? a.cljs$lang$arity$16(c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r)
+    return a.cljs$lang$arity$16 ? a.cljs$lang$arity$16(c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q)
   }
   var s = cljs.core._first.call(null, t), u = cljs.core._rest.call(null, t);
   if(17 === b) {
-    return a.cljs$lang$arity$17 ? a.cljs$lang$arity$17(c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s)
+    return a.cljs$lang$arity$17 ? a.cljs$lang$arity$17(c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s)
   }
-  var t = cljs.core._first.call(null, u), x = cljs.core._rest.call(null, u);
+  var t = cljs.core._first.call(null, u), v = cljs.core._rest.call(null, u);
   if(18 === b) {
-    return a.cljs$lang$arity$18 ? a.cljs$lang$arity$18(c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s, t) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s, t)
+    return a.cljs$lang$arity$18 ? a.cljs$lang$arity$18(c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s, t) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s, t)
   }
-  u = cljs.core._first.call(null, x);
-  x = cljs.core._rest.call(null, x);
+  u = cljs.core._first.call(null, v);
+  v = cljs.core._rest.call(null, v);
   if(19 === b) {
-    return a.cljs$lang$arity$19 ? a.cljs$lang$arity$19(c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s, t, u) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s, t, u)
+    return a.cljs$lang$arity$19 ? a.cljs$lang$arity$19(c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s, t, u) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s, t, u)
   }
-  var E = cljs.core._first.call(null, x);
-  cljs.core._rest.call(null, x);
+  var J = cljs.core._first.call(null, v);
+  cljs.core._rest.call(null, v);
   if(20 === b) {
-    return a.cljs$lang$arity$20 ? a.cljs$lang$arity$20(c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s, t, u, E) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, q, r, s, t, u, E)
+    return a.cljs$lang$arity$20 ? a.cljs$lang$arity$20(c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s, t, u, J) : a.call(null, c, d, e, f, g, a, h, i, j, l, m, k, n, p, r, q, s, t, u, J)
   }
   throw Error("Only up to 20 arguments supported on functions");
 };
@@ -6401,24 +6401,24 @@ cljs.core.every_pred = function() {
         var e = d.call(null, a);
         return cljs.core.truth_(e) ? (e = d.call(null, b), cljs.core.truth_(e) ? d.call(null, c) : e) : e
       }, e)
-    }, q = function(a, b, c, d) {
+    }, r = function(a, b, c, d) {
       return cljs.core.boolean$.call(null, function() {
         var g = f.call(null, a, b, c);
         return cljs.core.truth_(g) ? cljs.core.every_QMARK_.call(null, function(a) {
           return cljs.core.every_QMARK_.call(null, a, d)
         }, e) : g
       }())
-    }, r = function(a, b, c, d) {
+    }, q = function(a, b, c, d) {
       var e = null;
       goog.isDef(d) && (e = cljs.core.array_seq(Array.prototype.slice.call(arguments, 3), 0));
-      return q.call(this, a, b, c, e)
+      return r.call(this, a, b, c, e)
     };
-    r.cljs$lang$maxFixedArity = 3;
-    r.cljs$lang$applyTo = function(a) {
+    q.cljs$lang$maxFixedArity = 3;
+    q.cljs$lang$applyTo = function(a) {
       var b = cljs.core.first(a), c = cljs.core.first(cljs.core.next(a)), d = cljs.core.first(cljs.core.next(cljs.core.next(a))), a = cljs.core.rest(cljs.core.next(cljs.core.next(a)));
-      return q(b, c, d, a)
+      return r(b, c, d, a)
     };
-    r.cljs$lang$arity$variadic = q;
+    q.cljs$lang$arity$variadic = r;
     f = function(a, b, c, d) {
       switch(arguments.length) {
         case 0:
@@ -6430,19 +6430,19 @@ cljs.core.every_pred = function() {
         case 3:
           return p.call(this, a, b, c);
         default:
-          return r.cljs$lang$arity$variadic(a, b, c, cljs.core.array_seq(arguments, 3))
+          return q.cljs$lang$arity$variadic(a, b, c, cljs.core.array_seq(arguments, 3))
       }
       throw Error("Invalid arity: " + arguments.length);
     };
     f.cljs$lang$maxFixedArity = 3;
-    f.cljs$lang$applyTo = r.cljs$lang$applyTo;
+    f.cljs$lang$applyTo = q.cljs$lang$applyTo;
     f.cljs$lang$arity$0 = function() {
       return!0
     };
     f.cljs$lang$arity$1 = k;
     f.cljs$lang$arity$2 = n;
     f.cljs$lang$arity$3 = p;
-    f.cljs$lang$arity$variadic = r.cljs$lang$arity$variadic;
+    f.cljs$lang$arity$variadic = q.cljs$lang$arity$variadic;
     return f
   }, f = function(a, b, c, d) {
     var f = null;
@@ -6728,22 +6728,22 @@ cljs.core.some_fn = function() {
         e = d.call(null, b);
         return cljs.core.truth_(e) ? e : d.call(null, c)
       }, e)
-    }, q = function(a, b, c, d) {
+    }, r = function(a, b, c, d) {
       a = f.call(null, a, b, c);
       return cljs.core.truth_(a) ? a : cljs.core.some.call(null, function(a) {
         return cljs.core.some.call(null, a, d)
       }, e)
-    }, r = function(a, b, c, d) {
+    }, q = function(a, b, c, d) {
       var e = null;
       goog.isDef(d) && (e = cljs.core.array_seq(Array.prototype.slice.call(arguments, 3), 0));
-      return q.call(this, a, b, c, e)
+      return r.call(this, a, b, c, e)
     };
-    r.cljs$lang$maxFixedArity = 3;
-    r.cljs$lang$applyTo = function(a) {
+    q.cljs$lang$maxFixedArity = 3;
+    q.cljs$lang$applyTo = function(a) {
       var b = cljs.core.first(a), c = cljs.core.first(cljs.core.next(a)), d = cljs.core.first(cljs.core.next(cljs.core.next(a))), a = cljs.core.rest(cljs.core.next(cljs.core.next(a)));
-      return q(b, c, d, a)
+      return r(b, c, d, a)
     };
-    r.cljs$lang$arity$variadic = q;
+    q.cljs$lang$arity$variadic = r;
     f = function(a, b, c, d) {
       switch(arguments.length) {
         case 0:
@@ -6755,19 +6755,19 @@ cljs.core.some_fn = function() {
         case 3:
           return p.call(this, a, b, c);
         default:
-          return r.cljs$lang$arity$variadic(a, b, c, cljs.core.array_seq(arguments, 3))
+          return q.cljs$lang$arity$variadic(a, b, c, cljs.core.array_seq(arguments, 3))
       }
       throw Error("Invalid arity: " + arguments.length);
     };
     f.cljs$lang$maxFixedArity = 3;
-    f.cljs$lang$applyTo = r.cljs$lang$applyTo;
+    f.cljs$lang$applyTo = q.cljs$lang$applyTo;
     f.cljs$lang$arity$0 = function() {
       return null
     };
     f.cljs$lang$arity$1 = k;
     f.cljs$lang$arity$2 = n;
     f.cljs$lang$arity$3 = p;
-    f.cljs$lang$arity$variadic = r.cljs$lang$arity$variadic;
+    f.cljs$lang$arity$variadic = q.cljs$lang$arity$variadic;
     return f
   }, f = function(a, b, c, d) {
     var f = null;
@@ -20214,6 +20214,587 @@ clojure.browser.repl.connect = function(a) {
     return a.style.display = "none"
   })
 };
+goog.functions = {};
+goog.functions.constant = function(a) {
+  return function() {
+    return a
+  }
+};
+goog.functions.FALSE = goog.functions.constant(!1);
+goog.functions.TRUE = goog.functions.constant(!0);
+goog.functions.NULL = goog.functions.constant(null);
+goog.functions.identity = function(a) {
+  return a
+};
+goog.functions.error = function(a) {
+  return function() {
+    throw Error(a);
+  }
+};
+goog.functions.lock = function(a) {
+  return function() {
+    return a.call(this)
+  }
+};
+goog.functions.withReturnValue = function(a, b) {
+  return goog.functions.sequence(a, goog.functions.constant(b))
+};
+goog.functions.compose = function(a) {
+  var b = arguments, c = b.length;
+  return function() {
+    var a;
+    c && (a = b[c - 1].apply(this, arguments));
+    for(var e = c - 2;0 <= e;e--) {
+      a = b[e].call(this, a)
+    }
+    return a
+  }
+};
+goog.functions.sequence = function(a) {
+  var b = arguments, c = b.length;
+  return function() {
+    for(var a, e = 0;e < c;e++) {
+      a = b[e].apply(this, arguments)
+    }
+    return a
+  }
+};
+goog.functions.and = function(a) {
+  var b = arguments, c = b.length;
+  return function() {
+    for(var a = 0;a < c;a++) {
+      if(!b[a].apply(this, arguments)) {
+        return!1
+      }
+    }
+    return!0
+  }
+};
+goog.functions.or = function(a) {
+  var b = arguments, c = b.length;
+  return function() {
+    for(var a = 0;a < c;a++) {
+      if(b[a].apply(this, arguments)) {
+        return!0
+      }
+    }
+    return!1
+  }
+};
+goog.functions.not = function(a) {
+  return function() {
+    return!a.apply(this, arguments)
+  }
+};
+goog.functions.create = function(a, b) {
+  var c = function() {
+  };
+  c.prototype = a.prototype;
+  c = new c;
+  a.apply(c, Array.prototype.slice.call(arguments, 1));
+  return c
+};
+/*
+ Portions of this code are from the Dojo Toolkit, received by
+ The Closure Library Authors under the BSD license. All other code is
+ Copyright 2005-2009 The Closure Library Authors. All Rights Reserved.
+
+The "New" BSD License:
+
+Copyright (c) 2005-2009, The Dojo Foundation
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+ Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+ Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+ Neither the name of the Dojo Foundation nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+goog.dom.query = function() {
+  function a(a, b) {
+    var c = b || [];
+    a && c.push(a);
+    return c
+  }
+  var b = goog.userAgent.WEBKIT && "BackCompat" == goog.dom.getDocument().compatMode, c = goog.dom.getDocument().firstChild.children ? "children" : "childNodes", d = !1, e = function(a) {
+    for(var a = 0 <= ">~+".indexOf(a.slice(-1)) ? a + " * " : a + " ", b = function(b, c) {
+      return goog.string.trim(a.slice(b, c))
+    }, c = [], e = -1, f = -1, g = -1, h = -1, i = -1, j = -1, k = -1, l = "", m = "", n, p = 0, r = a.length, q = null, s = null, t = function() {
+      0 <= j && (q.id = b(j, p).replace(/\\/g, ""), j = -1);
+      if(0 <= k) {
+        var a = k == p ? null : b(k, p);
+        0 > ">~+".indexOf(a) ? q.tag = a : q.oper = a;
+        k = -1
+      }
+      0 <= i && (q.classes.push(b(i + 1, p).replace(/\\/g, "")), i = -1)
+    };l = m, m = a.charAt(p), p < r;p++) {
+      if("\\" != l) {
+        if(q || (n = p, q = {query:null, pseudos:[], attrs:[], classes:[], tag:null, oper:null, id:null, getTag:function() {
+          return d ? this.otag : this.tag
+        }}, k = p), 0 <= e) {
+          if("]" == m) {
+            s.attr ? s.matchFor = b(g || e + 1, p) : s.attr = b(e + 1, p);
+            if((e = s.matchFor) && ('"' == e.charAt(0) || "'" == e.charAt(0))) {
+              s.matchFor = e.slice(1, -1)
+            }
+            q.attrs.push(s);
+            s = null;
+            e = g = -1
+          }else {
+            "=" == m && (g = 0 <= "|~^$*".indexOf(l) ? l : "", s.type = g + m, s.attr = b(e + 1, p - g.length), g = p + 1)
+          }
+        }else {
+          0 <= f ? ")" == m && (0 <= h && (s.value = b(f + 1, p)), h = f = -1) : "#" == m ? (t(), j = p + 1) : "." == m ? (t(), i = p) : ":" == m ? (t(), h = p) : "[" == m ? (t(), e = p, s = {}) : "(" == m ? (0 <= h && (s = {name:b(h + 1, p), value:null}, q.pseudos.push(s)), f = p) : " " == m && l != m && (t(), 0 <= h && q.pseudos.push({name:b(h + 1, p)}), q.loops = q.pseudos.length || q.attrs.length || q.classes.length, q.oquery = q.query = b(n, p), q.otag = q.tag = q.oper ? null : q.tag || "*", 
+          q.tag && (q.tag = q.tag.toUpperCase()), c.length && c[c.length - 1].oper && (q.infixOper = c.pop(), q.query = q.infixOper.query + " " + q.query), c.push(q), q = null)
+        }
+      }
+    }
+    return c
+  }, f = function(a, b) {
+    return!a ? b : !b ? a : function() {
+      return a.apply(window, arguments) && b.apply(window, arguments)
+    }
+  }, g = function(a) {
+    return 1 == a.nodeType
+  }, h = function(a, b) {
+    return!a ? "" : "class" == b ? a.className || "" : "for" == b ? a.htmlFor || "" : "style" == b ? a.style.cssText || "" : (d ? a.getAttribute(b) : a.getAttribute(b, 2)) || ""
+  }, i = {"*=":function(a, b) {
+    return function(c) {
+      return 0 <= h(c, a).indexOf(b)
+    }
+  }, "^=":function(a, b) {
+    return function(c) {
+      return 0 == h(c, a).indexOf(b)
+    }
+  }, "$=":function(a, b) {
+    return function(c) {
+      c = " " + h(c, a);
+      return c.lastIndexOf(b) == c.length - b.length
+    }
+  }, "~=":function(a, b) {
+    var c = " " + b + " ";
+    return function(b) {
+      return 0 <= (" " + h(b, a) + " ").indexOf(c)
+    }
+  }, "|=":function(a, b) {
+    b = " " + b;
+    return function(c) {
+      c = " " + h(c, a);
+      return c == b || 0 == c.indexOf(b + "-")
+    }
+  }, "=":function(a, b) {
+    return function(c) {
+      return h(c, a) == b
+    }
+  }}, j = "undefined" == typeof goog.dom.getDocument().firstChild.nextElementSibling, l = !j ? "nextElementSibling" : "nextSibling", m = !j ? "previousElementSibling" : "previousSibling", k = j ? g : goog.functions.TRUE, n = function(a) {
+    for(;a = a[m];) {
+      if(k(a)) {
+        return!1
+      }
+    }
+    return!0
+  }, p = function(a) {
+    for(;a = a[l];) {
+      if(k(a)) {
+        return!1
+      }
+    }
+    return!0
+  }, r = function(a) {
+    var b = a.parentNode, d = 0, e = b[c], f = a._i || -1, g = b._l || -1;
+    if(!e) {
+      return-1
+    }
+    e = e.length;
+    if(g == e && 0 <= f && 0 <= g) {
+      return f
+    }
+    b._l = e;
+    f = -1;
+    for(b = b.firstElementChild || b.firstChild;b;b = b[l]) {
+      k(b) && (b._i = ++d, a === b && (f = d))
+    }
+    return f
+  }, q = function(a) {
+    return!(r(a) % 2)
+  }, s = function(a) {
+    return r(a) % 2
+  }, t = {checked:function() {
+    return function(a) {
+      return a.checked || a.attributes.checked
+    }
+  }, "first-child":function() {
+    return n
+  }, "last-child":function() {
+    return p
+  }, "only-child":function() {
+    return function(a) {
+      return!n(a) || !p(a) ? !1 : !0
+    }
+  }, empty:function() {
+    return function(a) {
+      for(var b = a.childNodes, a = a.childNodes.length - 1;0 <= a;a--) {
+        var c = b[a].nodeType;
+        if(1 === c || 3 == c) {
+          return!1
+        }
+      }
+      return!0
+    }
+  }, contains:function(a, b) {
+    var c = b.charAt(0);
+    if('"' == c || "'" == c) {
+      b = b.slice(1, -1)
+    }
+    return function(a) {
+      return 0 <= a.innerHTML.indexOf(b)
+    }
+  }, not:function(a, b) {
+    var c = e(b)[0], d = {el:1};
+    "*" != c.tag && (d.tag = 1);
+    c.classes.length || (d.classes = 1);
+    var f = v(c, d);
+    return function(a) {
+      return!f(a)
+    }
+  }, "nth-child":function(a, b) {
+    if("odd" == b) {
+      return s
+    }
+    if("even" == b) {
+      return q
+    }
+    if(-1 != b.indexOf("n")) {
+      var c = b.split("n", 2), d = c[0] ? "-" == c[0] ? -1 : parseInt(c[0], 10) : 1, e = c[1] ? parseInt(c[1], 10) : 0, f = 0, g = -1;
+      0 < d ? 0 > e ? e = e % d && d + e % d : 0 < e && (e >= d && (f = e - e % d), e %= d) : 0 > d && (d *= -1, 0 < e && (g = e, e %= d));
+      if(0 < d) {
+        return function(a) {
+          a = r(a);
+          return a >= f && (0 > g || a <= g) && a % d == e
+        }
+      }
+      b = e
+    }
+    var h = parseInt(b, 10);
+    return function(a) {
+      return r(a) == h
+    }
+  }}, u = goog.userAgent.IE ? function(a) {
+    var b = a.toLowerCase();
+    "class" == b && (a = "className");
+    return function(c) {
+      return d ? c.getAttribute(a) : c[a] || c[b]
+    }
+  } : function(a) {
+    return function(b) {
+      return b && b.getAttribute && b.hasAttribute(a)
+    }
+  }, v = function(a, b) {
+    if(!a) {
+      return goog.functions.TRUE
+    }
+    var b = b || {}, c = null;
+    b.el || (c = f(c, g));
+    b.tag || "*" != a.tag && (c = f(c, function(b) {
+      return b && b.tagName == a.getTag()
+    }));
+    b.classes || goog.array.forEach(a.classes, function(a, b) {
+      var d = RegExp("(?:^|\\s)" + a + "(?:\\s|$)");
+      c = f(c, function(a) {
+        return d.test(a.className)
+      });
+      c.count = b
+    });
+    b.pseudos || goog.array.forEach(a.pseudos, function(a) {
+      var b = a.name;
+      t[b] && (c = f(c, t[b](b, a.value)))
+    });
+    b.attrs || goog.array.forEach(a.attrs, function(a) {
+      var b, d = a.attr;
+      a.type && i[a.type] ? b = i[a.type](d, a.matchFor) : d.length && (b = u(d));
+      b && (c = f(c, b))
+    });
+    b.id || a.id && (c = f(c, function(b) {
+      return!!b && b.id == a.id
+    }));
+    !c && !("default" in b) && (c = goog.functions.TRUE);
+    return c
+  }, J = {}, Q = function(d) {
+    var e = J[d.query];
+    if(e) {
+      return e
+    }
+    var f = d.infixOper, f = f ? f.oper : "", h = v(d, {el:1}), i = "*" == d.tag, m = goog.dom.getDocument().getElementsByClassName;
+    if(f) {
+      if(m = {el:1}, i && (m.tag = 1), h = v(d, m), "+" == f) {
+        var n = h, e = function(a, b, c) {
+          for(;a = a[l];) {
+            if(!j || g(a)) {
+              (!c || C(a, c)) && n(a) && b.push(a);
+              break
+            }
+          }
+          return b
+        }
+      }else {
+        if("~" == f) {
+          var p = h, e = function(a, b, c) {
+            for(a = a[l];a;) {
+              if(k(a)) {
+                if(c && !C(a, c)) {
+                  break
+                }
+                p(a) && b.push(a)
+              }
+              a = a[l]
+            }
+            return b
+          }
+        }else {
+          if(">" == f) {
+            var q = h, q = q || goog.functions.TRUE, e = function(a, b, d) {
+              for(var e = 0, f = a[c];a = f[e++];) {
+                k(a) && ((!d || C(a, d)) && q(a, e)) && b.push(a)
+              }
+              return b
+            }
+          }
+        }
+      }
+    }else {
+      if(d.id) {
+        h = !d.loops && i ? goog.functions.TRUE : v(d, {el:1, id:1}), e = function(b, c) {
+          var e = goog.dom.getDomHelper(b).getElement(d.id);
+          if(e && h(e)) {
+            if(9 == b.nodeType) {
+              return a(e, c)
+            }
+            for(var f = e.parentNode;f && f != b;) {
+              f = f.parentNode
+            }
+            if(f) {
+              return a(e, c)
+            }
+          }
+        }
+      }else {
+        if(m && /\{\s*\[native code\]\s*\}/.test(String(m)) && d.classes.length && !b) {
+          var h = v(d, {el:1, classes:1, id:1}), r = d.classes.join(" "), e = function(b, c) {
+            for(var d = a(0, c), e, f = 0, g = b.getElementsByClassName(r);e = g[f++];) {
+              h(e, b) && d.push(e)
+            }
+            return d
+          }
+        }else {
+          !i && !d.loops ? e = function(b, c) {
+            for(var e = a(0, c), f, g = 0, h = b.getElementsByTagName(d.getTag());f = h[g++];) {
+              e.push(f)
+            }
+            return e
+          } : (h = v(d, {el:1, tag:1, id:1}), e = function(b, c) {
+            for(var e = a(0, c), f, g = 0, i = b.getElementsByTagName(d.getTag());f = i[g++];) {
+              h(f, b) && e.push(f)
+            }
+            return e
+          })
+        }
+      }
+    }
+    return J[d.query] = e
+  }, x = {}, y = {}, z = function(b) {
+    var c = e(goog.string.trim(b));
+    if(1 == c.length) {
+      var d = Q(c[0]);
+      return function(a) {
+        if(a = d(a, [])) {
+          a.nozip = !0
+        }
+        return a
+      }
+    }
+    return function(b) {
+      for(var b = a(b), d, e, f = c.length, g, h, i = 0;i < f;i++) {
+        h = [];
+        d = c[i];
+        e = b.length - 1;
+        0 < e && (g = {}, h.nozip = !0);
+        e = Q(d);
+        for(var j = 0;d = b[j];j++) {
+          e(d, h, g)
+        }
+        if(!h.length) {
+          break
+        }
+        b = h
+      }
+      return h
+    }
+  }, A = !!goog.dom.getDocument().querySelectorAll && (!goog.userAgent.WEBKIT || goog.userAgent.isVersion("526")), B = function(a, c) {
+    if(A) {
+      var d = y[a];
+      if(d && !c) {
+        return d
+      }
+    }
+    if(d = x[a]) {
+      return d
+    }
+    var d = a.charAt(0), e = -1 == a.indexOf(" ");
+    0 <= a.indexOf("#") && e && (c = !0);
+    if(A && !c && -1 == ">~+".indexOf(d) && (!goog.userAgent.IE || -1 == a.indexOf(":")) && !(b && 0 <= a.indexOf(".")) && -1 == a.indexOf(":contains") && -1 == a.indexOf("|=")) {
+      var f = 0 <= ">~+".indexOf(a.charAt(a.length - 1)) ? a + " *" : a;
+      return y[a] = function(b) {
+        try {
+          if(!(9 == b.nodeType || e)) {
+            throw"";
+          }
+          var c = b.querySelectorAll(f);
+          goog.userAgent.IE ? c.commentStrip = !0 : c.nozip = !0;
+          return c
+        }catch(d) {
+          return B(a, !0)(b)
+        }
+      }
+    }
+    var g = a.split(/\s*,\s*/);
+    return x[a] = 2 > g.length ? z(a) : function(a) {
+      for(var b = 0, c = [], d;d = g[b++];) {
+        c = c.concat(z(d)(a))
+      }
+      return c
+    }
+  }, w = 0, D = goog.userAgent.IE ? function(a) {
+    return d ? a.getAttribute("_uid") || a.setAttribute("_uid", ++w) || w : a.uniqueID
+  } : function(a) {
+    return a._uid || (a._uid = ++w)
+  }, C = function(a, b) {
+    if(!b) {
+      return 1
+    }
+    var c = D(a);
+    return!b[c] ? b[c] = 1 : 0
+  }, E = function(a) {
+    if(a && a.nozip) {
+      return a
+    }
+    var b = [];
+    if(!a || !a.length) {
+      return b
+    }
+    a[0] && b.push(a[0]);
+    if(2 > a.length) {
+      return b
+    }
+    w++;
+    if(goog.userAgent.IE && d) {
+      var c = w + "";
+      a[0].setAttribute("_zipIdx", c);
+      for(var e = 1, f;f = a[e];e++) {
+        a[e].getAttribute("_zipIdx") != c && b.push(f), f.setAttribute("_zipIdx", c)
+      }
+    }else {
+      if(goog.userAgent.IE && a.commentStrip) {
+        try {
+          for(e = 1;f = a[e];e++) {
+            g(f) && b.push(f)
+          }
+        }catch(h) {
+        }
+      }else {
+        a[0] && (a[0]._zipIdx = w);
+        for(e = 1;f = a[e];e++) {
+          a[e]._zipIdx != w && b.push(f), f._zipIdx = w
+        }
+      }
+    }
+    return b
+  }, F = function(a, b) {
+    if(!a) {
+      return[]
+    }
+    if(a.constructor == Array) {
+      return a
+    }
+    if(!goog.isString(a)) {
+      return[a]
+    }
+    if(goog.isString(b) && (b = goog.dom.getElement(b), !b)) {
+      return[]
+    }
+    var b = b || goog.dom.getDocument(), c = b.ownerDocument || b.documentElement;
+    d = b.contentType && "application/xml" == b.contentType || goog.userAgent.OPERA && (b.doctype || "[object XMLDocument]" == c.toString()) || !!c && (goog.userAgent.IE ? c.xml : b.xmlVersion || c.xmlVersion);
+    return(c = B(a)(b)) && c.nozip ? c : E(c)
+  };
+  F.pseudos = t;
+  return F
+}();
+goog.exportSymbol("goog.dom.query", goog.dom.query);
+goog.exportSymbol("goog.dom.query.pseudos", goog.dom.query.pseudos);
+domina.css = {};
+domina.css.root_element = function() {
+  return goog.dom.getElementsByTagNameAndClass("html")[0]
+};
+domina.css.sel = function() {
+  var a = null, b = function(b) {
+    return a.call(null, domina.css.root_element.call(null), b)
+  }, c = function(b, c) {
+    void 0 === domina.css.t4271 && (domina.css.t4271 = {}, domina.css.t4271 = function(a, b, c, d) {
+      this.expr = a;
+      this.base = b;
+      this.sel = c;
+      this.meta4272 = d;
+      this.cljs$lang$protocol_mask$partition1$ = 0;
+      this.cljs$lang$protocol_mask$partition0$ = 393216
+    }, domina.css.t4271.cljs$lang$type = !0, domina.css.t4271.cljs$lang$ctorPrSeq = function() {
+      return cljs.core.list.call(null, "domina.css/t4271")
+    }, domina.css.t4271.cljs$lang$ctorPrWriter = function(a, b) {
+      return cljs.core._write.call(null, b, "domina.css/t4271")
+    }, domina.css.t4271.prototype.domina$DomContent$ = !0, domina.css.t4271.prototype.domina$DomContent$nodes$arity$1 = function() {
+      var a = this;
+      return cljs.core.mapcat.call(null, function(b) {
+        return domina.normalize_seq.call(null, goog.dom.query(a.expr, b))
+      }, domina.nodes.call(null, a.base))
+    }, domina.css.t4271.prototype.domina$DomContent$single_node$arity$1 = function() {
+      var a = this;
+      return cljs.core.first.call(null, cljs.core.filter.call(null, cljs.core.complement.call(null, cljs.core.nil_QMARK_), cljs.core.mapcat.call(null, function(b) {
+        return domina.normalize_seq.call(null, goog.dom.query(a.expr, b))
+      }, domina.nodes.call(null, a.base))))
+    }, domina.css.t4271.prototype.cljs$core$IMeta$_meta$arity$1 = function() {
+      return this.meta4272
+    }, domina.css.t4271.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a, b) {
+      return new domina.css.t4271(this.expr, this.base, this.sel, b)
+    });
+    return new domina.css.t4271(c, b, a, null)
+  }, a = function(a, e) {
+    switch(arguments.length) {
+      case 1:
+        return b.call(this, a);
+      case 2:
+        return c.call(this, a, e)
+    }
+    throw Error("Invalid arity: " + arguments.length);
+  };
+  a.cljs$lang$arity$1 = b;
+  a.cljs$lang$arity$2 = c;
+  return a
+}();
 cljs.reader = {};
 cljs.reader.PushbackReader = {};
 cljs.reader.read_char = function(a) {
@@ -20599,9 +21180,9 @@ cljs.reader.parse_and_validate_timestamp = function() {
         return cljs.core._EQ_.call(null, a, "-") ? "-1" : "1"
       }], !0), d)), k = cljs.core.nth.call(null, m, 0, null);
       cljs.core.nth.call(null, k, 0, null);
-      var d = cljs.core.nth.call(null, k, 1, null), l = cljs.core.nth.call(null, k, 2, null), n = cljs.core.nth.call(null, k, 3, null), p = cljs.core.nth.call(null, k, 4, null), q = cljs.core.nth.call(null, k, 5, null), r = cljs.core.nth.call(null, k, 6, null), k = cljs.core.nth.call(null, k, 7, null), s = cljs.core.nth.call(null, m, 1, null), m = cljs.core.nth.call(null, s, 0, null), t = cljs.core.nth.call(null, s, 1, null), s = cljs.core.nth.call(null, s, 2, null);
+      var d = cljs.core.nth.call(null, k, 1, null), l = cljs.core.nth.call(null, k, 2, null), n = cljs.core.nth.call(null, k, 3, null), p = cljs.core.nth.call(null, k, 4, null), r = cljs.core.nth.call(null, k, 5, null), q = cljs.core.nth.call(null, k, 6, null), k = cljs.core.nth.call(null, k, 7, null), s = cljs.core.nth.call(null, m, 1, null), m = cljs.core.nth.call(null, s, 0, null), t = cljs.core.nth.call(null, s, 1, null), s = cljs.core.nth.call(null, s, 2, null);
       return cljs.core.PersistentVector.fromArray([cljs.core.not.call(null, c) ? 1970 : d, cljs.core.not.call(null, f) ? 1 : b.call(null, 1, l, 12, "timestamp month field must be in range 1..12"), cljs.core.not.call(null, g) ? 1 : b.call(null, 1, n, cljs.reader.days_in_month.call(null, l, cljs.reader.leap_year_QMARK_.call(null, d)), "timestamp day field must be in range 1..last day in month"), cljs.core.not.call(null, h) ? 0 : b.call(null, 0, p, 23, "timestamp hour field must be in range 0..23"), 
-      cljs.core.not.call(null, i) ? 0 : b.call(null, 0, q, 59, "timestamp minute field must be in range 0..59"), cljs.core.not.call(null, j) ? 0 : b.call(null, 0, r, cljs.core._EQ_.call(null, q, 59) ? 60 : 59, "timestamp second field must be in range 0..60"), cljs.core.not.call(null, e) ? 0 : b.call(null, 0, k, 999, "timestamp millisecond field must be in range 0..999"), m * (60 * t + s)], !0)
+      cljs.core.not.call(null, i) ? 0 : b.call(null, 0, r, 59, "timestamp minute field must be in range 0..59"), cljs.core.not.call(null, j) ? 0 : b.call(null, 0, q, cljs.core._EQ_.call(null, r, 59) ? 60 : 59, "timestamp second field must be in range 0..60"), cljs.core.not.call(null, e) ? 0 : b.call(null, 0, k, 999, "timestamp millisecond field must be in range 0..999"), m * (60 * t + s)], !0)
     }
     return null
   }
@@ -20988,6 +21569,7 @@ shoreleave.remotes.http_rpc.remote_callback = function() {
 var speedy_xfer = {client:{}};
 speedy_xfer.client.s3 = {};
 speedy_xfer.client.s3.access_key = cljs.core.atom.call(null, "");
+speedy_xfer.client.s3.current_file = cljs.core.atom.call(null, cljs.core.ObjMap.EMPTY);
 speedy_xfer.client.s3.retrieve_access_key = function() {
   return shoreleave.remotes.http_rpc.remote_callback.call(null, "\ufdd0'access-key", cljs.core.PersistentVector.EMPTY, function(a) {
     return cljs.core.reset_BANG_.call(null, speedy_xfer.client.s3.access_key, (new cljs.core.Keyword("\ufdd0'access-key")).call(null, a))
@@ -21007,31 +21589,35 @@ speedy_xfer.client.s3.generate_form_data = function(a, b, c, d) {
   e.append("file", d);
   return e
 };
-speedy_xfer.client.s3.upload_signed_file = function(a, b, c, d, e, f) {
-  var g = new XMLHttpRequest;
-  g.open("POST", a, !0);
-  g.onerror = function(a) {
+speedy_xfer.client.s3.upload_signed_file = function(a, b, c, d, e, f, g) {
+  var h = new XMLHttpRequest;
+  h.open("POST", a, !0);
+  h.onerror = function(a) {
     return window.sslast = a
   };
-  g.upload.onprogress = f;
-  return g.send(speedy_xfer.client.s3.generate_form_data.call(null, b, c, d, e))
+  h.upload.onprogress = f;
+  h.onload = g;
+  return h.send(speedy_xfer.client.s3.generate_form_data.call(null, b, c, d, e))
 };
 speedy_xfer.client.s3.file_list_to_array = function(a) {
   return cljs.core.reduce.call(null, function(b, c) {
     return cljs.core.conj.call(null, b, a.item(c))
   }, cljs.core.PersistentVector.EMPTY, cljs.core.range.call(null, a.length))
 };
-speedy_xfer.client.s3.upload_file = function(a, b, c) {
-  return speedy_xfer.client.s3.sign_file_path.call(null, a, b, function(b) {
-    return speedy_xfer.client.s3.upload_signed_file.call(null, (new cljs.core.Keyword("\ufdd0'target-url")).call(null, b), (new cljs.core.Keyword("\ufdd0'key")).call(null, b), (new cljs.core.Keyword("\ufdd0'policy")).call(null, b), (new cljs.core.Keyword("\ufdd0'signature")).call(null, b), a, c)
-  })
+speedy_xfer.client.s3.signed_file_handler = function(a, b, c, d) {
+  cljs.core.reset_BANG_.call(null, speedy_xfer.client.s3.current_file, cljs.core.ObjMap.fromObject(["\ufdd0'original-bucket", "\ufdd0'key", "\ufdd0'original-region-url", "\ufdd0'target-url"], {"\ufdd0'original-bucket":(new cljs.core.Keyword("\ufdd0'bucket")).call(null, d), "\ufdd0'key":(new cljs.core.Keyword("\ufdd0'key")).call(null, d), "\ufdd0'original-region-url":(new cljs.core.Keyword("\ufdd0'region-url")).call(null, d), "\ufdd0'target-url":(new cljs.core.Keyword("\ufdd0'target-url")).call(null, 
+  d)}));
+  return speedy_xfer.client.s3.upload_signed_file.call(null, (new cljs.core.Keyword("\ufdd0'target-url")).call(null, d), (new cljs.core.Keyword("\ufdd0'key")).call(null, d), (new cljs.core.Keyword("\ufdd0'policy")).call(null, d), (new cljs.core.Keyword("\ufdd0'signature")).call(null, d), a, b, c)
 };
-speedy_xfer.client.s3.upload_files = function(a, b, c) {
+speedy_xfer.client.s3.upload_file = function(a, b, c, d) {
+  return speedy_xfer.client.s3.sign_file_path.call(null, a, b, cljs.core.partial.call(null, speedy_xfer.client.s3.signed_file_handler, a, c, d))
+};
+speedy_xfer.client.s3.upload_files = function(a, b, c, d) {
   a = speedy_xfer.client.s3.file_list_to_array.call(null, a);
   for(a = cljs.core.seq.call(null, a);;) {
     if(a) {
-      var d = cljs.core.first.call(null, a);
-      speedy_xfer.client.s3.upload_file.call(null, d, b, c);
+      var e = cljs.core.first.call(null, a);
+      speedy_xfer.client.s3.upload_file.call(null, e, b, c, d);
       a = cljs.core.next.call(null, a)
     }else {
       return null
@@ -21039,18 +21625,36 @@ speedy_xfer.client.s3.upload_files = function(a, b, c) {
   }
 };
 speedy_xfer.client.s3.init = function() {
+  cljs.core.PersistentVector.EMPTY;
   return speedy_xfer.client.s3.retrieve_access_key.call(null)
 };
+speedy_xfer.client.add_download_link = function(a, b) {
+  var c = domina.single_node.call(null, domina.css.sel.call(null, a, "a"));
+  domina.set_text_BANG_.call(null, c, "download");
+  return domina.set_attr_BANG_.call(null, c, "\ufdd0'href", b)
+};
+speedy_xfer.client.reset_download_link = function(a) {
+  a = domina.single_node.call(null, domina.css.sel.call(null, a, "a"));
+  domina.set_text_BANG_.call(null, a, "generate");
+  return domina.set_attr_BANG_.call(null, a, "\ufdd0'href", "")
+};
+speedy_xfer.client.upload_complete_handler = function() {
+  domina.log.call(null, "upload complete");
+  return cljs.core.doall.call(null, cljs.core.map.call(null, function(a) {
+    return cljs.core._EQ_.call(null, (new cljs.core.Keyword("\ufdd0'original-region-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), a.getAttribute(cljs.core.name.call(null, "\ufdd0'data-region"))) ? speedy_xfer.client.add_download_link.call(null, a, [cljs.core.str((new cljs.core.Keyword("\ufdd0'target-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file))), cljs.core.str((new cljs.core.Keyword("\ufdd0'key")).call(null, cljs.core.deref.call(null, 
+    speedy_xfer.client.s3.current_file)))].join("")) : speedy_xfer.client.reset_download_link.call(null, a)
+  }, domina.nodes.call(null, domina.css.sel.call(null, ".dest-region"))))
+};
+goog.exportSymbol("speedy_xfer.client.upload_complete_handler", speedy_xfer.client.upload_complete_handler);
 speedy_xfer.client.upload_progress_handler = function(a) {
   var b = a.loaded, a = a.total, c = domina.by_id.call(null, "file-progress");
   c.max = a;
   return c.value = b
 };
 speedy_xfer.client.handle_file_select = function(a) {
-  return speedy_xfer.client.s3.upload_files.call(null, (new cljs.core.Keyword("\ufdd0'target")).call(null, a).files, domina.by_id.call(null, "region-from").value, speedy_xfer.client.upload_progress_handler)
+  return speedy_xfer.client.s3.upload_files.call(null, (new cljs.core.Keyword("\ufdd0'target")).call(null, a).files, domina.by_id.call(null, "region-from").value, speedy_xfer.client.upload_progress_handler, speedy_xfer.client.upload_complete_handler)
 };
 speedy_xfer.client.init = function() {
-  clojure.browser.repl.connect.call(null, "http://localhost:9000/repl");
   speedy_xfer.client.s3.init.call(null);
   return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "files"), "\ufdd0'change", speedy_xfer.client.handle_file_select)
 };
