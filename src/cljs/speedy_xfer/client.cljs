@@ -25,10 +25,18 @@
                    f))
 
 
+(defn upload-progress-handler [e data]
+  (let [done (.-loaded e)
+        total (.-total e)
+        progress-bar (by-id "file-progress")]
+    (set! (.-max progress-bar) total)
+    (set! (.-value progress-bar) done)))
+
 (defn upload-signed-file [url filekey policy signature file]
   (let [xhr (js/XMLHttpRequest.)]
     (.open xhr "POST" url true)
     (set! (.-onerror xhr) #(set! (.-sslast js/window) %))
+    (set! (.-onprogress (.-upload xhr)) upload-progress-handler)
     (.send xhr (generate-form-data filekey policy signature file))))
 
 

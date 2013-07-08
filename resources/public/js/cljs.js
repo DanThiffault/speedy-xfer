@@ -20997,12 +20997,17 @@ var speedy_xfer = {generate_form_data:function(a, b, c, d) {
   return e
 }, sign_file_path:function(a, b) {
   return shoreleave.remotes.http_rpc.remote_callback.call(null, "\ufdd0'sign-url", cljs.core.PersistentVector.fromArray([domina.by_id.call(null, "region-from").value, a.name], !0), b)
+}, upload_progress_handler:function(a) {
+  var b = a.loaded, a = a.total, c = domina.by_id.call(null, "file-progress");
+  c.max = a;
+  return c.value = b
 }, upload_signed_file:function(a, b, c, d, e) {
   var f = new XMLHttpRequest;
   f.open("POST", a, !0);
   f.onerror = function(a) {
     return window.sslast = a
   };
+  f.upload.onprogress = speedy_xfer.upload_progress_handler;
   return f.send(speedy_xfer.generate_form_data.call(null, b, c, d, e))
 }, file_list_to_array:function(a) {
   return cljs.core.reduce.call(null, function(b, c) {
