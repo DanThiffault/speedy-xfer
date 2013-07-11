@@ -21660,7 +21660,7 @@ speedy_xfer.client.s3.generate_form_data = function(a, b, c, d) {
   var e = new FormData;
   e.append("key", a);
   e.append("AWSAccessKeyId", cljs.core.deref.call(null, speedy_xfer.client.s3.access_key));
-  e.append("acl", "public-read");
+  e.append("acl", "bucket-owner-read");
   e.append("policy", b);
   e.append("signature", c);
   e.append("success_action_status", "201");
@@ -21683,8 +21683,8 @@ speedy_xfer.client.s3.file_list_to_array = function(a) {
   }, cljs.core.PersistentVector.EMPTY, cljs.core.range.call(null, a.length))
 };
 speedy_xfer.client.s3.signed_file_handler = function(a, b, c, d) {
-  cljs.core.reset_BANG_.call(null, speedy_xfer.client.s3.current_file, cljs.core.ObjMap.fromObject(["\ufdd0'original-bucket", "\ufdd0'key", "\ufdd0'original-region-url", "\ufdd0'target-url"], {"\ufdd0'original-bucket":(new cljs.core.Keyword("\ufdd0'bucket")).call(null, d), "\ufdd0'key":(new cljs.core.Keyword("\ufdd0'key")).call(null, d), "\ufdd0'original-region-url":(new cljs.core.Keyword("\ufdd0'region-url")).call(null, d), "\ufdd0'target-url":(new cljs.core.Keyword("\ufdd0'target-url")).call(null, 
-  d)}));
+  cljs.core.reset_BANG_.call(null, speedy_xfer.client.s3.current_file, cljs.core.ObjMap.fromObject(["\ufdd0'original-bucket", "\ufdd0'key", "\ufdd0'original-region-url", "\ufdd0'target-url", "\ufdd0'public-url"], {"\ufdd0'original-bucket":(new cljs.core.Keyword("\ufdd0'bucket")).call(null, d), "\ufdd0'key":(new cljs.core.Keyword("\ufdd0'key")).call(null, d), "\ufdd0'original-region-url":(new cljs.core.Keyword("\ufdd0'region-url")).call(null, d), "\ufdd0'target-url":(new cljs.core.Keyword("\ufdd0'target-url")).call(null, 
+  d), "\ufdd0'public-url":(new cljs.core.Keyword("\ufdd0'public-url")).call(null, d)}));
   return speedy_xfer.client.s3.upload_signed_file.call(null, (new cljs.core.Keyword("\ufdd0'target-url")).call(null, d), (new cljs.core.Keyword("\ufdd0'key")).call(null, d), (new cljs.core.Keyword("\ufdd0'policy")).call(null, d), (new cljs.core.Keyword("\ufdd0'signature")).call(null, d), a, b, c)
 };
 speedy_xfer.client.s3.upload_file = function(a, b, c, d) {
@@ -21731,8 +21731,7 @@ speedy_xfer.client.reset_download_link = function(a) {
 };
 speedy_xfer.client.upload_complete_handler = function() {
   cljs.core.doall.call(null, cljs.core.map.call(null, function(a) {
-    return cljs.core._EQ_.call(null, (new cljs.core.Keyword("\ufdd0'original-region-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), a.getAttribute(cljs.core.name.call(null, "\ufdd0'data-region"))) ? speedy_xfer.client.add_download_link.call(null, a, [cljs.core.str((new cljs.core.Keyword("\ufdd0'target-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file))), cljs.core.str((new cljs.core.Keyword("\ufdd0'key")).call(null, cljs.core.deref.call(null, 
-    speedy_xfer.client.s3.current_file)))].join("")) : speedy_xfer.client.reset_download_link.call(null, a)
+    return cljs.core._EQ_.call(null, (new cljs.core.Keyword("\ufdd0'original-region-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), a.getAttribute(cljs.core.name.call(null, "\ufdd0'data-region"))) ? speedy_xfer.client.add_download_link.call(null, a, (new cljs.core.Keyword("\ufdd0'public-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file))) : speedy_xfer.client.reset_download_link.call(null, a)
   }, domina.nodes.call(null, domina.css.sel.call(null, ".dest-region"))));
   return domina.set_style_BANG_.call(null, domina.by_id.call(null, "region-download-links"), "display", "block")
 };

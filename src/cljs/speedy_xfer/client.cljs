@@ -38,7 +38,7 @@
 (defn upload-complete-handler []
   (doall
    (map #(if (= (:original-region-url @s3/current-file) (.getAttribute % (name :data-region)))
-           (add-download-link % (str (:target-url @s3/current-file) (:key @s3/current-file)))
+           (add-download-link % (:public-url @s3/current-file))
            (reset-download-link %))
         (nodes (css/sel ".dest-region"))))
   (set-style! (by-id "region-download-links") "display" "block"))

@@ -11,6 +11,9 @@
 
 (def s3-bucket-suffix "uploads")
 
+(defn file2key [filename]
+  (str s3-bucket-suffix "/" filename))
+
 (def regions [["US East" "s3.amazonaws.com"]
               ;["Oregon" "s3-us-west-2.amazonaws.com"]
               ;["N. California" "s3-us-west-1.amazonaws.com"]
@@ -39,7 +42,7 @@
                             {:expiration (->> 24 hours from-now (unparse (formatters :date-time-no-ms )))
                              :conditions [
                                           {:bucket bucket}
-                                          {:acl "public-read"}
+                                          {:acl "bucket-owner-read"}
                                           ["starts-with" "$key" (str bucket-suffix "/")]
                                           {:success_action_status "201"}
                                           ["content-length-range" 0 110485760]]
@@ -61,11 +64,13 @@
      #"\n|\r" "")))
 
 (defn generate-signed-url [cred region-url bucket filename]
-  (let [policy (generate-policy (generate-policy-document bucket s3-bucket-suffix))]
-     {:key (str s3-bucket-suffix "/" filename)
+  (let [fkey (file2key filename)
+        policy (generate-policy (generate-policy-document bucket s3-bucket-suffix))]
+     {:key fkey
       :policy policy
       :signature (generate-signature (:secret-key cred) policy)
       :target-url (str "https://" bucket "." region-url "/")
+      :public-url (as3/generate-presigned-url cred bucket fkey)
       :bucket bucket
       :region-url region-url}))
 

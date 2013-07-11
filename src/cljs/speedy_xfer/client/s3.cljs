@@ -24,7 +24,7 @@
   (let [fd (js/FormData.)]
     (.append fd "key" filekey)
     (.append fd "AWSAccessKeyId" @access-key)
-    (.append fd "acl" "public-read")
+    (.append fd "acl" "bucket-owner-read")
     (.append fd "policy" policy)
     (.append fd "signature" signature)
     (.append fd "success_action_status" "201")
@@ -43,7 +43,7 @@
   (reduce (fn [a b] (conj a (.item file-list b))) [] (range (.-length file-list))))
 
 (defn signed-file-handler [file progress-handler complete-handler response]
-  (reset! current-file {:original-bucket (:bucket response) :key (:key response) :original-region-url (:region-url response) :target-url (:target-url response)})
+  (reset! current-file {:original-bucket (:bucket response) :key (:key response) :original-region-url (:region-url response) :target-url (:target-url response) :public-url (:public-url response)})
   (upload-signed-file (:target-url response) (:key response) (:policy response) (:signature response) file progress-handler complete-handler))
 
 (defn upload-file [file region progress-handler upload-complete-handler]
