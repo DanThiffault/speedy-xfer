@@ -15,6 +15,11 @@
                    [region (.-name file)]
                    f))
 
+(defn copy-to-destination [src-bucket dest-region fkey f]
+  (remote-callback :copy-to-destination
+                   [src-bucket dest-region fkey]
+                   f))
+
 (defn generate-form-data [filekey policy signature file]
   (let [fd (js/FormData.)]
     (.append fd "key" filekey)

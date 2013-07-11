@@ -16791,6 +16791,81 @@ domina.events.get_listeners = function(a, b) {
     return goog.events.getListeners(a, c, !1)
   }, domina.nodes.call(null, a))
 };
+domina.xpath = {};
+domina.xpath.select_node_STAR_ = function(a, b, c, d) {
+  var e = goog.dom.getOwnerDocument(b);
+  if(cljs.core.truth_(function() {
+    var a = b.selectSingleNode;
+    return cljs.core.truth_(a) ? e.setProperty : a
+  }())) {
+    return e.setProperty("SelectionLanguage", "XPath"), c.call(null, b, a)
+  }
+  if(cljs.core.truth_(e.evaluate)) {
+    return d.call(null, null, e, b, a)
+  }
+  throw Error("Could not find XPath support in this browser.");
+};
+domina.xpath.select_node = function(a, b) {
+  return domina.xpath.select_node_STAR_.call(null, a, b, function(a, b) {
+    return a.selectSingleNode(b)
+  }, function(a, b, e, f) {
+    return b.evaluate(f, e, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue
+  })
+};
+domina.xpath.select_nodes = function(a, b) {
+  return domina.xpath.select_node_STAR_.call(null, a, b, function(a, b) {
+    return a.selectNodes(b)
+  }, function(a, b, e, f) {
+    for(var a = b.evaluate(f, e, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null), b = a.snapshotLength, e = 0, g = null;;) {
+      if(e < b) {
+        f = e + 1, g = cljs.core.cons.call(null, a.snapshotItem(e), g), e = f
+      }else {
+        return g
+      }
+    }
+  })
+};
+domina.xpath.root_element = function() {
+  return goog.dom.getElementsByTagNameAndClass("html")[0]
+};
+domina.xpath.xpath = function() {
+  var a = null, b = function(b) {
+    return a.call(null, domina.xpath.root_element.call(null), b)
+  }, c = function(b, c) {
+    void 0 === domina.xpath.t5618 && (domina.xpath.t5618 = {}, domina.xpath.t5618 = function(a, b, c, d) {
+      this.expr = a;
+      this.base = b;
+      this.xpath = c;
+      this.meta5619 = d;
+      this.cljs$lang$protocol_mask$partition1$ = 0;
+      this.cljs$lang$protocol_mask$partition0$ = 393216
+    }, domina.xpath.t5618.cljs$lang$type = !0, domina.xpath.t5618.cljs$lang$ctorPrSeq = function() {
+      return cljs.core.list.call(null, "domina.xpath/t5618")
+    }, domina.xpath.t5618.cljs$lang$ctorPrWriter = function(a, b) {
+      return cljs.core._write.call(null, b, "domina.xpath/t5618")
+    }, domina.xpath.t5618.prototype.domina$DomContent$ = !0, domina.xpath.t5618.prototype.domina$DomContent$nodes$arity$1 = function() {
+      return cljs.core.mapcat.call(null, cljs.core.partial.call(null, domina.xpath.select_nodes, this.expr), domina.nodes.call(null, this.base))
+    }, domina.xpath.t5618.prototype.domina$DomContent$single_node$arity$1 = function() {
+      return cljs.core.first.call(null, cljs.core.filter.call(null, cljs.core.complement.call(null, cljs.core.nil_QMARK_), cljs.core.map.call(null, cljs.core.partial.call(null, domina.xpath.select_node, this.expr), domina.nodes.call(null, this.base))))
+    }, domina.xpath.t5618.prototype.cljs$core$IMeta$_meta$arity$1 = function() {
+      return this.meta5619
+    }, domina.xpath.t5618.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a, b) {
+      return new domina.xpath.t5618(this.expr, this.base, this.xpath, b)
+    });
+    return new domina.xpath.t5618(c, b, a, null)
+  }, a = function(a, e) {
+    switch(arguments.length) {
+      case 1:
+        return b.call(this, a);
+      case 2:
+        return c.call(this, a, e)
+    }
+    throw Error("Invalid arity: " + arguments.length);
+  };
+  a.cljs$lang$arity$1 = b;
+  a.cljs$lang$arity$2 = c;
+  return a
+}();
 goog.events.EventTarget = function() {
   goog.Disposable.call(this)
 };
@@ -21578,6 +21653,9 @@ speedy_xfer.client.s3.retrieve_access_key = function() {
 speedy_xfer.client.s3.sign_file_path = function(a, b, c) {
   return shoreleave.remotes.http_rpc.remote_callback.call(null, "\ufdd0'sign-url", cljs.core.PersistentVector.fromArray([b, a.name], !0), c)
 };
+speedy_xfer.client.s3.copy_to_destination = function(a, b, c, d) {
+  return shoreleave.remotes.http_rpc.remote_callback.call(null, "\ufdd0'copy-to-destination", cljs.core.PersistentVector.fromArray([a, b, c], !0), d)
+};
 speedy_xfer.client.s3.generate_form_data = function(a, b, c, d) {
   var e = new FormData;
   e.append("key", a);
@@ -21631,22 +21709,33 @@ speedy_xfer.client.s3.init = function() {
 speedy_xfer.client.add_download_link = function(a, b) {
   var c = domina.single_node.call(null, domina.css.sel.call(null, a, "a"));
   domina.set_text_BANG_.call(null, c, "download");
-  return domina.set_attr_BANG_.call(null, c, "\ufdd0'href", b)
+  domina.set_attr_BANG_.call(null, c, "\ufdd0'href", b);
+  return domina.events.unlisten_BANG_.call(null, c, "\ufdd0'click")
+};
+speedy_xfer.client.file_copied_handler = function(a) {
+  var b = domina.single_node.call(null, domina.xpath.xpath.call(null, [cljs.core.str("//td[@data-region='"), cljs.core.str((new cljs.core.Keyword("\ufdd0'region")).call(null, a)), cljs.core.str("']")].join("")));
+  return speedy_xfer.client.add_download_link.call(null, b, (new cljs.core.Keyword("\ufdd0'url")).call(null, a))
+};
+speedy_xfer.client.generate_link_handle = function(a) {
+  domina.events.prevent_default.call(null, a);
+  var a = domina.events.target.call(null, a), b = (new cljs.core.Keyword("\ufdd0'original-bucket")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), c = domina.single_node.call(null, domina.xpath.xpath.call(null, a, "ancestor::td")).getAttribute(cljs.core.name.call(null, "\ufdd0'data-region")), d = (new cljs.core.Keyword("\ufdd0'key")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file));
+  domina.set_text_BANG_.call(null, a, "Transfering file to region...");
+  domina.set_attr_BANG_.call(null, a, "\ufdd0'href", "");
+  return speedy_xfer.client.s3.copy_to_destination.call(null, b, c, d, speedy_xfer.client.file_copied_handler)
 };
 speedy_xfer.client.reset_download_link = function(a) {
   a = domina.single_node.call(null, domina.css.sel.call(null, a, "a"));
   domina.set_text_BANG_.call(null, a, "generate");
-  return domina.set_attr_BANG_.call(null, a, "\ufdd0'href", "")
+  domina.set_attr_BANG_.call(null, a, "\ufdd0'href", "#generate");
+  return domina.events.listen_BANG_.call(null, a, "\ufdd0'click", speedy_xfer.client.generate_link_handle)
 };
 speedy_xfer.client.upload_complete_handler = function() {
-  domina.log.call(null, "upload complete");
   cljs.core.doall.call(null, cljs.core.map.call(null, function(a) {
     return cljs.core._EQ_.call(null, (new cljs.core.Keyword("\ufdd0'original-region-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), a.getAttribute(cljs.core.name.call(null, "\ufdd0'data-region"))) ? speedy_xfer.client.add_download_link.call(null, a, [cljs.core.str((new cljs.core.Keyword("\ufdd0'target-url")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file))), cljs.core.str((new cljs.core.Keyword("\ufdd0'key")).call(null, cljs.core.deref.call(null, 
     speedy_xfer.client.s3.current_file)))].join("")) : speedy_xfer.client.reset_download_link.call(null, a)
   }, domina.nodes.call(null, domina.css.sel.call(null, ".dest-region"))));
   return domina.set_style_BANG_.call(null, domina.by_id.call(null, "region-download-links"), "display", "block")
 };
-goog.exportSymbol("speedy_xfer.client.upload_complete_handler", speedy_xfer.client.upload_complete_handler);
 speedy_xfer.client.upload_progress_handler = function(a) {
   var b = a.loaded, a = a.total, c = domina.by_id.call(null, "file-progress");
   c.max = a;

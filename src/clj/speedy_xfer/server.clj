@@ -68,6 +68,10 @@
 
 (defremote access-key [] {:access-key (:access-key s3/cred)})
 
+(defremote copy-to-destination [src-bucket dest-region fkey]
+  (let [dest-bucket (get s3/regional-buckets dest-region)
+        result (s3/copy-object s3/cred src-bucket dest-bucket fkey)]
+    {:region dest-region :url (s3/generate-presigned-url s3/cred dest-bucket fkey)}))
 
 (def handler
   (site app-routes))

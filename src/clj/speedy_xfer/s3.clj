@@ -4,7 +4,8 @@
         [clj-time.core  :only [hours from-now]]
         [clj-time.format :only [unparse formatters]])
   (:require [clojure.string :as s]
-            [clojure.data.json :as json])
+            [clojure.data.json :as json]
+            [aws.sdk.s3 :as as3])
   (:import (javax.crypto Mac
                          spec.SecretKeySpec)))
 
@@ -22,13 +23,13 @@
 
 (def regional-buckets
   {"s3.amazonaws.com" "speedyxfer-us-east-1"
-   "s3-us-west-2.amazonaws.com" "speedyxfer-ap-southeast-1"
-   "s3-us-west-1.amazonaws.com" "speedyxfer-ap-southeast-1"
-   "s3-eu-west-1.amazonaws.com" "speedyxfer-ap-southeast-1"
+   "s3-us-west-2.amazonaws.com" ""
+   "s3-us-west-1.amazonaws.com" ""
+   "s3-eu-west-1.amazonaws.com" ""
    "s3-ap-southeast-1.amazonaws.com" "speedyxfer-ap-southeast-1"
-   "s3-ap-southeast-2.amazonaws.com" "speedyxfer-ap-southeast-1"
-   "s3-ap-northeast-1.amazonaws.com" "speedyxfer-ap-southeast-1"
-   "s3-sa-east-1.amazonaws.com" "speedyxfer-ap-southeast-1"})
+   "s3-ap-southeast-2.amazonaws.com" ""
+   "s3-ap-northeast-1.amazonaws.com" ""
+   "s3-sa-east-1.amazonaws.com" ""})
 
 (def cred
   {:secret-key (env :s3-secret)
@@ -67,3 +68,8 @@
       :target-url (str "https://" bucket "." region-url "/")
       :bucket bucket
       :region-url region-url}))
+
+(defn generate-presigned-url [cred bucket fkey] (as3/generate-presigned-url cred bucket fkey))
+
+(defn copy-object [cred src-bucket dest-bucket fkey]
+  (as3/copy-object cred src-bucket fkey dest-bucket fkey))
