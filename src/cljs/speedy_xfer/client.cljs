@@ -24,10 +24,10 @@
   (let [tag (events/target e)
         src-bucket (:original-bucket @s3/current-file)
         dest-region (.getAttribute (single-node (xpath tag "ancestor::td")) (name :data-region))
-        fkey (:key @s3/current-file)]
+        file-name (:file-name @s3/current-file)]
     (set-text! tag "Transfering file to region...")
     (set-attr! tag :href "")
-    (s3/copy-to-destination src-bucket dest-region fkey file-copied-handler)))
+    (s3/copy-to-destination src-bucket dest-region file-name file-copied-handler)))
 
 (defn reset-download-link [container]
   (let [tag (single-node (css/sel container "a"))]

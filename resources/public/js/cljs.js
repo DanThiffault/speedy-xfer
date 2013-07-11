@@ -21683,8 +21683,8 @@ speedy_xfer.client.s3.file_list_to_array = function(a) {
   }, cljs.core.PersistentVector.EMPTY, cljs.core.range.call(null, a.length))
 };
 speedy_xfer.client.s3.signed_file_handler = function(a, b, c, d) {
-  cljs.core.reset_BANG_.call(null, speedy_xfer.client.s3.current_file, cljs.core.ObjMap.fromObject(["\ufdd0'original-bucket", "\ufdd0'key", "\ufdd0'original-region-url", "\ufdd0'target-url", "\ufdd0'public-url"], {"\ufdd0'original-bucket":(new cljs.core.Keyword("\ufdd0'bucket")).call(null, d), "\ufdd0'key":(new cljs.core.Keyword("\ufdd0'key")).call(null, d), "\ufdd0'original-region-url":(new cljs.core.Keyword("\ufdd0'region-url")).call(null, d), "\ufdd0'target-url":(new cljs.core.Keyword("\ufdd0'target-url")).call(null, 
-  d), "\ufdd0'public-url":(new cljs.core.Keyword("\ufdd0'public-url")).call(null, d)}));
+  cljs.core.reset_BANG_.call(null, speedy_xfer.client.s3.current_file, cljs.core.ObjMap.fromObject("\ufdd0'original-bucket \ufdd0'key \ufdd0'original-region-url \ufdd0'target-url \ufdd0'public-url \ufdd0'file-name".split(" "), {"\ufdd0'original-bucket":(new cljs.core.Keyword("\ufdd0'bucket")).call(null, d), "\ufdd0'key":(new cljs.core.Keyword("\ufdd0'key")).call(null, d), "\ufdd0'original-region-url":(new cljs.core.Keyword("\ufdd0'region-url")).call(null, d), "\ufdd0'target-url":(new cljs.core.Keyword("\ufdd0'target-url")).call(null, 
+  d), "\ufdd0'public-url":(new cljs.core.Keyword("\ufdd0'public-url")).call(null, d), "\ufdd0'file-name":(new cljs.core.Keyword("\ufdd0'file-name")).call(null, d)}));
   return speedy_xfer.client.s3.upload_signed_file.call(null, (new cljs.core.Keyword("\ufdd0'target-url")).call(null, d), (new cljs.core.Keyword("\ufdd0'key")).call(null, d), (new cljs.core.Keyword("\ufdd0'policy")).call(null, d), (new cljs.core.Keyword("\ufdd0'signature")).call(null, d), a, b, c)
 };
 speedy_xfer.client.s3.upload_file = function(a, b, c, d) {
@@ -21718,7 +21718,7 @@ speedy_xfer.client.file_copied_handler = function(a) {
 };
 speedy_xfer.client.generate_link_handle = function(a) {
   domina.events.prevent_default.call(null, a);
-  var a = domina.events.target.call(null, a), b = (new cljs.core.Keyword("\ufdd0'original-bucket")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), c = domina.single_node.call(null, domina.xpath.xpath.call(null, a, "ancestor::td")).getAttribute(cljs.core.name.call(null, "\ufdd0'data-region")), d = (new cljs.core.Keyword("\ufdd0'key")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file));
+  var a = domina.events.target.call(null, a), b = (new cljs.core.Keyword("\ufdd0'original-bucket")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file)), c = domina.single_node.call(null, domina.xpath.xpath.call(null, a, "ancestor::td")).getAttribute(cljs.core.name.call(null, "\ufdd0'data-region")), d = (new cljs.core.Keyword("\ufdd0'file-name")).call(null, cljs.core.deref.call(null, speedy_xfer.client.s3.current_file));
   domina.set_text_BANG_.call(null, a, "Transfering file to region...");
   domina.set_attr_BANG_.call(null, a, "\ufdd0'href", "");
   return speedy_xfer.client.s3.copy_to_destination.call(null, b, c, d, speedy_xfer.client.file_copied_handler)

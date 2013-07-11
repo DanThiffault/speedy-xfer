@@ -67,6 +67,7 @@
   (let [fkey (file2key filename)
         policy (generate-policy (generate-policy-document bucket s3-bucket-suffix))]
      {:key fkey
+      :file-name filename
       :policy policy
       :signature (generate-signature (:secret-key cred) policy)
       :target-url (str "https://" bucket "." region-url "/")

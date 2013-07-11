@@ -43,7 +43,7 @@
   (reduce (fn [a b] (conj a (.item file-list b))) [] (range (.-length file-list))))
 
 (defn signed-file-handler [file progress-handler complete-handler response]
-  (reset! current-file {:original-bucket (:bucket response) :key (:key response) :original-region-url (:region-url response) :target-url (:target-url response) :public-url (:public-url response)})
+  (reset! current-file {:original-bucket (:bucket response) :key (:key response) :original-region-url (:region-url response) :target-url (:target-url response) :public-url (:public-url response) :file-name (:file-name response)})
   (upload-signed-file (:target-url response) (:key response) (:policy response) (:signature response) file progress-handler complete-handler))
 
 (defn upload-file [file region progress-handler upload-complete-handler]
